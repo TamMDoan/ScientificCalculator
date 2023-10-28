@@ -37,4 +37,10 @@ public class Console {
         Double userInput = scanner.nextDouble();
         return userInput;
     }
+
+    // add
+    public static Double addNumbers(Double number1, Double number2){
+
+        return number1 + number2;
+    }
 }
