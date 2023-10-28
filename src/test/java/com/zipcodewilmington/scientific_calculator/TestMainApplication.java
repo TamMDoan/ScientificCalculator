@@ -21,6 +21,14 @@ public class TestMainApplication {
         Double expected = 3.0;
 
         assertEquals(expected, addNumbers(number1, number2));
+
+
     }
+
+    @Test
+    public void testDisplayZero(){
+        Console.displayZero();
+    }
+
 
 }

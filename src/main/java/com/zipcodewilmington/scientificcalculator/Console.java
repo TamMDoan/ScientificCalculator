@@ -43,4 +43,12 @@ public class Console {
 
         return number1 + number2;
     }
+
+    public static void displayZero () {
+        int displayZero = 0;
+        System.out.println( displayZero);
+
+    }
+
 }
+
