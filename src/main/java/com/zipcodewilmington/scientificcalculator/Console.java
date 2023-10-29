@@ -43,4 +43,5 @@ public class Console {
 
         return number1 + number2;
     }
+    public void numberSign
 }
