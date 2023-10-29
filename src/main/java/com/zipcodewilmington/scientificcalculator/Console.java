@@ -89,42 +89,42 @@ public class Console {
 
     public static Double sine(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.toDegrees(Math.sin(number));
+            return Math.sin(Math.toDegrees(number));
         }
         return Math.sin(number);
     }
 
     public static Double cosine(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.toDegrees(Math.cos(number));
+            return Math.cos(Math.toDegrees(number));
         }
         return Math.cos(number);
     }
 
     public static Double tangent(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.toDegrees(Math.tan(number));
+            return Math.tan(Math.toDegrees(number));
         }
         return Math.tan(number);
     }
 
     public static Double inSin(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.toDegrees(Math.asin(number));
+            return Math.asin(Math.toDegrees(number));
         }
         return Math.asin(number);
     }
 
     public static Double inCos(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.toDegrees(Math.acos(number));
+            return Math.acos(Math.toDegrees(number));
         }
         return Math.acos(number);
     }
 
     public static Double inTan(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.toDegrees(Math.atan(number));
+            return Math.atan(Math.toDegrees(number));
         }
         return Math.atan(number);
     }
