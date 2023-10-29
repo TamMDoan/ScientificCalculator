@@ -87,6 +87,10 @@ public class MainApplication {
                 mode = switchUnitModes(newMode);
                 Console.println("CURRENT NUMBER %s", currentNumber);
 
+            }
+            else if(Objects.equals(userInput.toLowerCase(), "cosine")){
+                currentNumber = cosine(currentNumber, mode);
+                Console.println("CURRENT NUMBER %s", currentNumber);
             }else if (Objects.equals(userInput.toLowerCase(), "exit")) {
                 break;
             }
