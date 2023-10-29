@@ -313,4 +313,27 @@ public class TestMainApplication {
         assertEquals(expected2, convertCtoF(35.0));
     }
 
+    @Test
+    public void testLog() {
+        Double expected = 1.0;
+        assertEquals(expected, logarithm(10.0));
+    }
+
+    @Test
+    public void testInverseLog() {
+        Double expected = 10.0;
+        assertEquals(expected, inverseLogarithm(1.0));
+    }
+
+    @Test
+    public void testNaturalLog() {
+        Double expected = 0.6931471805599453;
+        assertEquals(expected, naturalLogarithm(2.0));
+    }
+
+    @Test
+    public void testInverseNaturalLog() {
+        Double expected = 2.7182818284590455;
+        assertEquals(expected, inverseNaturalLogarithm(1.0));
+    }
 }
