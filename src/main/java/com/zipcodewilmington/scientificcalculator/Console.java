@@ -1,6 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 import java.lang.management.MemoryManagerMXBean;
+import java.nio.file.attribute.UserPrincipal;
 import java.util.Scanner;
 
 import java.lang.Math;
@@ -183,8 +184,16 @@ public class Console {
     }
 
     public static Double log(Double userInput) {
-        Math.log()
+        return Math.log(userInput);
     }
 
+    public static Double convertFtoC(Double userInput) {
+        Double celcius = ((userInput-32.0)*5)/9;
+        return celcius;
+    }
+    public static Double convertCtoF(Double userInput) {
+        Double fahrenheit = ((userInput*9)/5)+32;
+        return fahrenheit;
+    }
 }
 

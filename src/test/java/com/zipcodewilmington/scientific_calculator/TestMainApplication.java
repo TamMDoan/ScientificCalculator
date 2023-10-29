@@ -295,4 +295,22 @@ public class TestMainApplication {
         assertEquals(expected, factorial(0.0));
     }
 
+    @Test
+    public void testFtoC() {
+        Double expected1 = 10.0;
+        assertEquals(expected1, convertFtoC(50.0));
+
+        Double expected2 = 0.0;
+        assertEquals(expected2, convertFtoC(32.0));
+    }
+
+    @Test
+    public void testCtoF() {
+        Double expected1 = 68.0;
+        assertEquals(expected1, convertCtoF(20.0));
+
+        Double expected2 = 95.0;
+        assertEquals(expected2, convertCtoF(35.0));
+    }
+
 }
