@@ -28,7 +28,8 @@ public class MainApplication {
         Console.println("CURRENT NUMBER: %s", currentNumber);
 
         while (true) {
-            Console.println("What do you want to do? 1) Add 2) Subtract 3) Invert 4) M+");
+            Console.println("What do you want to do? 1) Add 2) Subtract 3) Invert 4) Subtract 5) Multiply 6) Divide 7) Square " +
+                    "8) Sqrt 9) Power 10) Inverse");
             Scanner scanner = new Scanner(System.in);
             String userInput = scanner.nextLine();
             if (Objects.equals(userInput, "Add")) {
@@ -58,7 +59,7 @@ public class MainApplication {
                 currentNumber = Console.squareNumber(currentNumber);
                 Console.println("CURRENT NUMBER %s", currentNumber);
             }
-            else if(Objects.equals(userInput, "Square root")){
+            else if(Objects.equals(userInput, "Sqrt")){
                 currentNumber = squareRootNumber(currentNumber);
                 Console.println("CURRENT NUMBER %s", currentNumber);
             }
