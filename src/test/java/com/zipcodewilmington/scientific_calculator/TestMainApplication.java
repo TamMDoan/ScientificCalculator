@@ -3,8 +3,6 @@ package com.zipcodewilmington.scientific_calculator;
 import com.zipcodewilmington.scientificcalculator.Console;
 import org.junit.Test;
 
-import java.util.Optional;
-
 import static com.zipcodewilmington.scientificcalculator.Console.*;
 import static org.junit.Assert.assertEquals;
 
