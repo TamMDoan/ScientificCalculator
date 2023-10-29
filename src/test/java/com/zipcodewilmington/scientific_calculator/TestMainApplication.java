@@ -144,7 +144,25 @@ public class TestMainApplication {
         assertEquals(expected, sine(number1, "radians"));
     }
 
+    @Test
+    public void divideNumbers_byZero(){
+        Double expected = 0.0;
 
+        assertEquals(expected, divideNumbers(5.0, 0.0));
+    }
 
+    @Test
+    public void factorialTest() {
+        Double expected = 120.0;
+
+        assertEquals(expected, factorial(5.0));
+    }
+
+    @Test
+    public void factorialTest_Zero() {
+        Double expected = 1.0;
+
+        assertEquals(expected, factorial(0.0));
+    }
 
 }

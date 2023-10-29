@@ -3,6 +3,8 @@ package com.zipcodewilmington.scientificcalculator;
 import java.lang.management.MemoryManagerMXBean;
 import java.util.Scanner;
 
+import java.lang.Math;
+
 /**
  * Created by leon on 2/9/18.
  */
@@ -59,7 +61,13 @@ public class Console {
     }
 
     public static Double divideNumbers(Double number1, Double number2){
-        return number1 / number2;
+        Double result = 0.0;
+        if (number2 == 0) {
+            Console.println("Error cannot divide by zero");
+        } else {
+            result = number1 / number2;
+        }
+        return result;
     }
 
     public static Double multiplyNumbers(Double number1, Double number2){
@@ -161,8 +169,22 @@ public class Console {
         return 0.0;
     }
 
+    public static Double factorial(Double userInput) {
+        if (userInput == 0) {
+            return 1.0;
+        }
+        else {
+            Double result = 1.0;
+            for (int i = 1; i < userInput; i++) {
+                result = result * (i + 1);
+            }
+            return result;
+        }
+    }
 
-
+    public static Double log(Double userInput) {
+        Math.log()
+    }
 
 }
 
