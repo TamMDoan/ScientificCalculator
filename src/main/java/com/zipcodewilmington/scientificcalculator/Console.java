@@ -1,5 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.lang.management.MemoryManagerMXBean;
 import java.util.Scanner;
 
 /**
@@ -136,7 +137,7 @@ public class Console {
         }
         return null;
     }
-
+//------------------------------------------------------
     public static void switchLogarithmicFunctions(){
         System.out.println("Modes: Logarithmic Functions, Factorials");
     }
@@ -148,7 +149,10 @@ public class Console {
         else if (mode.equals("Factorials")){
             return "factorials";
         }
-    }
+        return null;
+    } //------------------------------------------------
+
+
 
 }
 

@@ -28,7 +28,7 @@ public class MainApplication {
         Console.println("CURRENT NUMBER: %s", currentNumber);
 
         while (true) {
-            Console.println("What do you want to do? 1) Add 2) Subtract 3) Invert 4) Subtract 5) Multiply 6) Divide 7) Square " +
+            Console.println("What do you want to do? 1) Add 2) Subtract 3) Invert 4) Multiply 5) Divide 6) Square " +
                     "8) Sqrt 9) Power 10) Inverse");
             Scanner scanner = new Scanner(System.in);
             String userInput = scanner.nextLine();
@@ -54,6 +54,7 @@ public class MainApplication {
                 Double i2 = Console.getDoubleInput("Enter a number to divide by: ");
                 if (i2 == 0) {
                     Console.println("Error cannot divide by zero");
+                    Console.println("CURRENT NUMBER %s", currentNumber);
                 } else {
                     currentNumber = divideNumbers(currentNumber, i2);
                     Console.println("CURRENT NUMBER %s", currentNumber);
