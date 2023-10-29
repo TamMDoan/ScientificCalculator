@@ -76,6 +76,17 @@ public class MainApplication {
             else if(Objects.equals(userInput.toLowerCase(), "inverse")){
                 currentNumber = inverse(currentNumber);
                 Console.println("CURRENT NUMBER %s", currentNumber);
+            }
+            else if(Objects.equals(userInput.toLowerCase(), "sine")){
+                currentNumber = sine(currentNumber, mode);
+                Console.println("CURRENT NUMBER %s", currentNumber);
+            }
+            else if(Objects.equals(userInput.toLowerCase(), "switch")){
+                System.out.println("Which mode would you like to switch to? Degrees or radians?: ");
+                String newMode = scanner.nextLine();
+                mode = switchUnitModes(newMode);
+                Console.println("CURRENT NUMBER %s", currentNumber);
+
             }else if (Objects.equals(userInput.toLowerCase(), "exit")) {
                 break;
             }
