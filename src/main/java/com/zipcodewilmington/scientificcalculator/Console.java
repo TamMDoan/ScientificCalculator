@@ -121,9 +121,9 @@ public class Console {
 
     public static Double inCos(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.acos(Math.toRadians(number));
+            return Math.toDegrees(Math.acos(number));
         }
-        return (double) (Math.round(Math.acos(number) * 100) / 100);
+        return Math.acos(number);
     }
 
     public static Double inTan(Double number, String mode){

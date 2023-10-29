@@ -336,4 +336,40 @@ public class TestMainApplication {
         Double expected = 2.7182818284590455;
         assertEquals(expected, inverseNaturalLogarithm(1.0));
     }
+    @Test
+    public void testInverseCosDegrees(){
+        Double number = 0.0;
+
+        Double expected = 90.0;
+
+        assertEquals(expected, inCos(number, "degrees"));
+    }
+
+    @Test
+    public void testInverseCosDegrees2(){
+        Double number = 1.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, inCos(number, "degrees"));
+    }
+
+    @Test
+    public void testInverseCosRadians(){
+        Double number = 1.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, inCos(number, "radians"));
+    }
+
+    @Test
+    public void testInverseCodRadians2(){
+        Double number = -1.0;
+
+        Double expected = Math.PI;
+
+        assertEquals(expected, inCos(number, "radians"));
+    }
+
 }
