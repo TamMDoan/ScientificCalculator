@@ -108,4 +108,43 @@ public class TestMainApplication {
         assertEquals(expected, inverse(number1));
     }
 
+    @Test
+    public void testSineDegrees(){
+        Double number1 = 0.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, sine(number1, "degrees"));
+    }
+
+    @Test
+    public void testSineDegrees2(){
+        Double number1 = 90.0;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, sine(number1, "degrees"));
+    }
+
+    @Test
+    public void testSineRadians(){
+        Double number1 = Math.PI;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, sine(number1, "radians"));
+    }
+
+    @Test
+    public void testSineRadians2(){
+        Double number1 = Math.PI / 2;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, sine(number1, "radians"));
+    }
+
+
+
+
 }

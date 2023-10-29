@@ -84,44 +84,44 @@ public class Console {
 
     public static Double sine(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.sin(Math.toDegrees(number));
+            return Math.sin(Math.toRadians(number));
         }
-        return Math.sin(number);
+        return (double) (Math.round(Math.sin(number) * 100) / 100);
     }
 
     public static Double cosine(Double number, String mode){
         if(mode.equals("degrees")){
             return Math.cos(Math.toDegrees(number));
         }
-        return Math.cos(number);
+        return (double) (Math.round(Math.cos(number) * 100) / 100);
     }
 
     public static Double tangent(Double number, String mode){
         if(mode.equals("degrees")){
             return Math.tan(Math.toDegrees(number));
         }
-        return Math.tan(number);
+        return (double) (Math.round(Math.tan(number) * 100) / 100);
     }
 
     public static Double inSin(Double number, String mode){
         if(mode.equals("degrees")){
             return Math.asin(Math.toDegrees(number));
         }
-        return Math.asin(number);
+        return (double) (Math.round(Math.asin(number) * 100) / 100);
     }
 
     public static Double inCos(Double number, String mode){
         if(mode.equals("degrees")){
             return Math.acos(Math.toDegrees(number));
         }
-        return Math.acos(number);
+        return (double) (Math.round(Math.acos(number) * 100) / 100);
     }
 
     public static Double inTan(Double number, String mode){
         if(mode.equals("degrees")){
             return Math.atan(Math.toDegrees(number));
         }
-        return Math.atan(number);
+        return (double) (Math.round(Math.atan(number) * 100) / 100);
     }
 
     public static void switchUnitModes(){
@@ -129,13 +129,15 @@ public class Console {
     }
 
     public static String switchUnitModes(String mode){
-        if(mode.equals("Degrees")){
+        if(mode.equalsIgnoreCase("degrees")){
+            System.out.println("Your new mode: Degrees");
             return "degrees";
         }
-        else if(mode.equals("Radians")){
+        else {
+            // just have it default to radians
+            System.out.println("Your new mode: Radians");
             return "radians";
         }
-        return null;
     }
 //------------------------------------------------------
     public static void switchLogarithmicFunctions(){
