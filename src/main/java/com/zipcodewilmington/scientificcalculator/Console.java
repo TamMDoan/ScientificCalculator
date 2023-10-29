@@ -2,6 +2,7 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.lang.management.MemoryManagerMXBean;
 import java.nio.file.attribute.UserPrincipal;
+import java.awt.*;
 import java.util.Scanner;
 
 import java.lang.Math;
@@ -43,21 +44,22 @@ public class Console {
     }
 
     // add
-    public static Double addNumbers(Double number1, Double number2){
+    public static Double addNumbers(Double number1, Double number2) {
 
         return number1 + number2;
     }
 
     public static void displayZero () {
         int displayZero = 0;
-        System.out.println( displayZero);
+        System.out.println(displayZero);
 
     }
+
     public static Double numberSign(Double userNumber) {
         return -userNumber;
     }
 
-    public static Double subtractNumbers(Double number1, Double number2){
+    public static Double subtractNumbers(Double number1, Double number2) {
         return number1 - number2;
     }
 
@@ -71,28 +73,28 @@ public class Console {
         return result;
     }
 
-    public static Double multiplyNumbers(Double number1, Double number2){
+    public static Double multiplyNumbers(Double number1, Double number2) {
         return number1 * number2;
     }
 
-    public static Double squareNumber(Double number){
+    public static Double squareNumber(Double number) {
         return number * number;
     }
 
-    public static Double squareRootNumber(Double number){
+    public static Double squareRootNumber(Double number) {
         return Math.sqrt(number);
     }
 
-    public static Double power(Double number, Double exponent){
+    public static Double power(Double number, Double exponent) {
         return Math.pow(number, exponent);
     }
 
-    public static Double inverse(Double number){
+    public static Double inverse(Double number) {
         return 1 / number;
     }
 
-    public static Double sine(Double number, String mode){
-        if(mode.equals("degrees")){
+    public static Double sine(Double number, String mode) {
+        if (mode.equals("degrees")) {
             return Math.sin(Math.toRadians(number));
         }
         return (double) (Math.round(Math.sin(number) * 100) / 100);
@@ -101,7 +103,7 @@ public class Console {
     public static Double cosine(Double number, String mode){
         if(mode.equals("degrees")){
             return Math.cos(Math.toRadians(number));
-        } 
+        }
         return Math.round(Math.cos(number) * 100d) / 100d;
     }
 
@@ -133,12 +135,12 @@ public class Console {
         return (double) (Math.round(Math.atan(number) * 100) / 100);
     }
 
-    public static void switchUnitModes(){
+    public static void switchUnitModes() {
         System.out.println("Modes: Degrees, Radians");
     }
 
-    public static String switchUnitModes(String mode){
-        if(mode.equalsIgnoreCase("degrees")){
+    public static String switchUnitModes(String mode) {
+        if (mode.equalsIgnoreCase("degrees")) {
             System.out.println("Your new mode: Degrees");
             return "degrees";
         }
@@ -148,24 +150,34 @@ public class Console {
             return "radians";
         }
     }
-//------------------------------------------------------
-    public static void switchLogarithmicFunctions(){
+
+    //------------------------------------------------------
+    public static void switchLogarithmicFunctions() {
         System.out.println("Modes: Logarithmic Functions, Factorials");
     }
 
-    public static String switchFactorials(String mode){
-        if(mode.equals("Logarithmic Functions")){
+    public static String switchFactorials(String mode) {
+        if (mode.equals("Logarithmic Functions")) {
             return "logarithmic functions";
-        }
-        else if (mode.equals("Factorials")){
+        } else if (mode.equals("Factorials")) {
             return "factorials";
         }
         return null;
     } //------------------------------------------------
 
 
-    public static double clearScreen () {
-        System.out.println();
+
+    public static void switchDisplayMode() {
+        System.out.println("Modes: binary, octal,decimal,hexadecimal");
+    }
+
+    public static void switchDisplayMode( String mode){
+        System.out.println( "currentNumber");
+    }
+
+
+
+    public static double clearScreen() {
         System.out.flush();
         return 0.0;
     }
@@ -187,11 +199,17 @@ public class Console {
         Double log = Math.log10(userInput);
         return log;
     }
+    static double storage = 0.0;
 
-    public static Double inverseLogarithm(Double userInput) {
+    public static void Save(double Number) {
+        storage = Number;
+        System.out.println(storage);
+    }
+    public static Double inverseLogarithm (Double userInput){
         Double inverseLog = Math.pow(10, userInput);
         return inverseLog;
     }
+
 
     public static Double naturalLogarithm(Double userInput) {
         Double natLog = Math.log(userInput);
@@ -210,6 +228,10 @@ public class Console {
     public static Double convertCtoF(Double userInput) {
         Double fahrenheit = ((userInput*9)/5)+32;
         return fahrenheit;
+    }
+    public static double recall() {
+        return storage;
+
     }
 }
 
