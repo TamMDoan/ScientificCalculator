@@ -155,6 +155,14 @@ public class Console {
     } //------------------------------------------------
 
 
+    public static double clearScreen () {
+        System.out.println();
+        System.out.flush();
+        return 0.0;
+    }
+
+
+
 
 }
 
