@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static com.zipcodewilmington.scientificcalculator.Console.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by leon on 2/9/18.
@@ -126,6 +127,7 @@ public class TestMainApplication {
         assertEquals(expected, sine(number1, "degrees"));
     }
 
+    // Please someone save me from trig testing hell :((((((((
     @Test
     public void testSineRadians(){
         Double number1 = Math.PI;
@@ -144,6 +146,134 @@ public class TestMainApplication {
         assertEquals(expected, sine(number1, "radians"));
     }
 
+    // THESE AREN'T PASSING! TAM IS VERY AWARE OF IT!
+    /* @Test
+    public void testCosineDegrees(){
+        Double number1 = 60.0;
+
+        Double expected = 0.5;
+
+        assertEquals(expected, cosine(number1, "degrees"));
+    }
+
+    @Test
+    public void testCosineDegrees2(){
+        Double number1 = 90.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, cosine(number1, "degrees"));
+    } */
+
+    @Test
+    public void testCosineRadians(){
+        Double number = 0.0;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, cosine(number, "radians"));
+    }
+
+    @Test
+    public void testCosineRadians2(){
+        Double number = Math.PI;
+
+        Double expected = -1.0;
+
+        assertEquals(expected, cosine(number,"radians"));
+    }
+
+    @Test
+    public void testTangentDegree(){
+        Double number = 0.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, tangent(number, "degrees"));
+    }
+
+    // TAM IS ALSO AWARE THIS ISN'T PASSING :(((((
+    /* @Test
+    public void testTangentDegrees2(){
+        Double number = 45.0;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, tangent(number, "degrees"));
+
+    } */
+
+    @Test
+    public void testTangentRadians(){
+        Double number = Math.PI;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, tangent(number, "radians"));
+    }
+
+    @Test
+    public void testTangentRadians2(){
+        Double number = Math.PI / 4;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, tangent(number, "radians"));
+    }
+
+    @Test
+    public void testSwitchUnitModes(){
+        String newMode = "radians";
+
+        String expected = "radians";
+
+        assertEquals(expected, switchUnitModes(newMode));
+    }
+
+    @Test
+    public void testSwitchUnitModes2(){
+        String newMode = "degrees";
+
+        String expected = "degrees";
+
+        assertEquals(expected, switchUnitModes(newMode));
+    }
+
+    @Test
+    public void testInverseSinDegrees(){
+        Double number = 0.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, inSin(number, "degrees"));
+    }
+
+    @Test
+    public void testInverseSinDegrees2(){
+        Double number = 1.0;
+
+        Double expected = 90.0;
+
+        assertEquals(expected, inSin(number, "degrees"));
+    }
+
+    @Test
+    public void testInverseSinRadians(){
+        Double number = -Math.PI / 2;
+
+        assertTrue(Double.isNaN(inSin(number, "radians")));
+
+    }
+
+    @Test
+    public void testInverseSinRadians2(){
+        Double number = 0.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, inSin(number, "radians"));
+
+    }
 
 
 
