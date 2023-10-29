@@ -32,25 +32,25 @@ public class MainApplication {
                     "8) Sqrt 9) Power 10) Inverse");
             Scanner scanner = new Scanner(System.in);
             String userInput = scanner.nextLine();
-            if (Objects.equals(userInput, "Add")) {
+            if (Objects.equals(userInput.toLowerCase(), "add")) {
                 Double i2 = Console.getDoubleInput("Enter an integer to add");
                 currentNumber = addNumbers(currentNumber, i2);
                 Console.println("CURRENT NUMBER: %s", currentNumber);
-            } else if (Objects.equals(userInput, "Invert")) {
+            } else if (Objects.equals(userInput.toLowerCase(), "invert")) {
                 currentNumber = numberSign(currentNumber);
                 Console.println("CURRENT NUMBER: %s", currentNumber);
             }
-            else if (Objects.equals(userInput, "Subtract")) {
+            else if (Objects.equals(userInput.toLowerCase(), "subtract")) {
                 Double i2 = Console.getDoubleInput("Enter a number to subtract: ");
                 currentNumber = subtractNumbers(currentNumber, i2);
                 Console.println("CURRENT NUMBER: %s", currentNumber);
             }
-            else if(Objects.equals(userInput, "Multiply")) {
+            else if(Objects.equals(userInput.toLowerCase(), "multiply")) {
                 Double i2 = Console.getDoubleInput("Enter a number to multiply by: ");
                 currentNumber = multiplyNumbers(currentNumber, i2);
                 Console.println("CURRENT NUMBER %s", currentNumber);
             }
-            else if(Objects.equals(userInput, "Divide")){
+            else if(Objects.equals(userInput.toLowerCase(), "divide")){
                 Double i2 = Console.getDoubleInput("Enter a number to divide by: ");
                 if (i2 == 0) {
                     Console.println("Error cannot divide by zero");
@@ -60,23 +60,23 @@ public class MainApplication {
                     Console.println("CURRENT NUMBER %s", currentNumber);
                 }
             }
-            else if(Objects.equals(userInput, "Square")){
+            else if(Objects.equals(userInput.toLowerCase(), "square")){
                 currentNumber = Console.squareNumber(currentNumber);
                 Console.println("CURRENT NUMBER %s", currentNumber);
             }
-            else if(Objects.equals(userInput, "Sqrt")){
+            else if(Objects.equals(userInput.toLowerCase(), "sqrt")){
                 currentNumber = squareRootNumber(currentNumber);
                 Console.println("CURRENT NUMBER %s", currentNumber);
             }
-            else if(Objects.equals(userInput, "Power")){
+            else if(Objects.equals(userInput.toLowerCase(), "power")){
                 Double i2 = Console.getDoubleInput("Enter a number to raise to the power by: ");
                 currentNumber = power(currentNumber, i2);
                 Console.println("CURRENT NUMBER %s", currentNumber);
             }
-            else if(Objects.equals(userInput, "Inverse")){
+            else if(Objects.equals(userInput.toLowerCase(), "inverse")){
                 currentNumber = inverse(currentNumber);
                 Console.println("CURRENT NUMBER %s", currentNumber);
-            }else if (Objects.equals(userInput, "Exit")) {
+            }else if (Objects.equals(userInput.toLowerCase(), "exit")) {
                 break;
             }
         }
