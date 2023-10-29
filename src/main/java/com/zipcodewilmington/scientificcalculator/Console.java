@@ -129,7 +129,7 @@ public class Console {
     }
 
     public static String switchUnitModes(String mode){
-        if(mode.equals("Degrees")){
+        if(mode.equalsIgnoreCase("degrees")){
             return "degrees";
         }
         else {
