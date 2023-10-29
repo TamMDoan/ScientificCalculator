@@ -126,6 +126,7 @@ public class TestMainApplication {
         assertEquals(expected, sine(number1, "degrees"));
     }
 
+    // Please someone save me from trig testing hell :((((((((
     @Test
     public void testSineRadians(){
         Double number1 = Math.PI;
@@ -142,6 +143,81 @@ public class TestMainApplication {
         Double expected = 1.0;
 
         assertEquals(expected, sine(number1, "radians"));
+    }
+
+    // THESE AREN'T PASSING! TAM IS VERY AWARE OF IT!
+    @Test
+    public void testCosineDegrees(){
+        Double number1 = 60.0;
+
+        Double expected = 0.5;
+
+        assertEquals(expected, cosine(number1, "degrees"));
+    }
+
+    @Test
+    public void testCosineDegrees2(){
+        Double number1 = 90.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, cosine(number1, "degrees"));
+    }
+
+    @Test
+    public void testCosineRadians(){
+        Double number = 0.0;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, cosine(number, "radians"));
+    }
+
+    @Test
+    public void testCosineRadians2(){
+        Double number = Math.PI;
+
+        Double expected = -1.0;
+
+        assertEquals(expected, cosine(number,"radians"));
+    }
+
+    @Test
+    public void testTangentDegree(){
+        Double number = 0.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, tangent(number, "degrees"));
+    }
+
+    // TAM IS ALSO AWARE THIS ISN'T PASSING :(((((
+    @Test
+    public void testTangentDegrees2(){
+        Double number = 45.0;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, tangent(number, "degrees"));
+
+    }
+
+    @Test
+    public void testTangentRadians(){
+        Double number = Math.PI;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, tangent(number, "radians"));
+    }
+
+    @Test
+    public void testTangentRadians2(){
+        Double number = Math.PI / 4;
+
+        Double expected = 1.0;
+
+        assertEquals(expected, tangent(number, "radians"));
     }
 
 

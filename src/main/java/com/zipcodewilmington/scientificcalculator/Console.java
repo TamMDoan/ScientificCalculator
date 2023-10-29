@@ -91,35 +91,35 @@ public class Console {
 
     public static Double cosine(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.cos(Math.toDegrees(number));
-        }
-        return (double) (Math.round(Math.cos(number) * 100) / 100);
+            return Math.cos(Math.toRadians(number));
+        } 
+        return Math.round(Math.cos(number) * 100d) / 100d;
     }
 
     public static Double tangent(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.tan(Math.toDegrees(number));
+            return Math.tan(Math.toRadians(number));
         }
         return (double) (Math.round(Math.tan(number) * 100) / 100);
     }
 
     public static Double inSin(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.asin(Math.toDegrees(number));
+            return Math.asin(Math.toRadians(number));
         }
         return (double) (Math.round(Math.asin(number) * 100) / 100);
     }
 
     public static Double inCos(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.acos(Math.toDegrees(number));
+            return Math.acos(Math.toRadians(number));
         }
         return (double) (Math.round(Math.acos(number) * 100) / 100);
     }
 
     public static Double inTan(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.atan(Math.toDegrees(number));
+            return Math.atan(Math.toRadians(number));
         }
         return (double) (Math.round(Math.atan(number) * 100) / 100);
     }
