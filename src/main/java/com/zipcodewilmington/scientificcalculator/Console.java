@@ -105,9 +105,9 @@ public class Console {
 
     public static Double inSin(Double number, String mode){
         if(mode.equals("degrees")){
-            return Math.asin(Math.toRadians(number));
+            return Math.toDegrees(Math.asin(number));
         }
-        return (double) (Math.round(Math.asin(number) * 100) / 100);
+        return Math.asin(number);
     }
 
     public static Double inCos(Double number, String mode){

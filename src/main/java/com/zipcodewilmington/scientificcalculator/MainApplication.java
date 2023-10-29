@@ -97,7 +97,10 @@ public class MainApplication {
             }
             else if(Objects.equals(userInput.toLowerCase(), "tangent")){
                 currentNumber = tangent(currentNumber, mode);
-                
+                println("CURRENT NUMBER %s", currentNumber);
+            }else if(Objects.equals(userInput.toLowerCase(), "asin")){
+                currentNumber = inSin(currentNumber, mode);
+                println("CURRENT NUMBER %s", currentNumber);
             }else if (Objects.equals(userInput.toLowerCase(), "exit")) {
                 break;
             }

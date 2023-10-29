@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static com.zipcodewilmington.scientificcalculator.Console.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by leon on 2/9/18.
@@ -220,6 +221,59 @@ public class TestMainApplication {
         assertEquals(expected, tangent(number, "radians"));
     }
 
+    @Test
+    public void testSwitchUnitModes(){
+        String newMode = "radians";
+
+        String expected = "radians";
+
+        assertEquals(expected, switchUnitModes(newMode));
+    }
+
+    @Test
+    public void testSwitchUnitModes2(){
+        String newMode = "degrees";
+
+        String expected = "degrees";
+
+        assertEquals(expected, switchUnitModes(newMode));
+    }
+
+    @Test
+    public void testInverseSinDegrees(){
+        Double number = 0.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, inSin(number, "degrees"));
+    }
+
+    @Test
+    public void testInverseSinDegrees2(){
+        Double number = 1.0;
+
+        Double expected = 90.0;
+
+        assertEquals(expected, inSin(number, "degrees"));
+    }
+
+    @Test
+    public void testInverseSinRadians(){
+        Double number = -Math.PI / 2;
+
+        assertTrue(Double.isNaN(inSin(number, "radians")));
+
+    }
+
+    @Test
+    public void testInverseSinRadians2(){
+        Double number = 0.0;
+
+        Double expected = 0.0;
+
+        assertEquals(expected, inSin(number, "radians"));
+
+    }
 
 
 
