@@ -3,9 +3,8 @@ package com.zipcodewilmington.scientific_calculator;
 import com.zipcodewilmington.scientificcalculator.Console;
 import org.junit.Test;
 
-import java.util.Optional;
-
 import static com.zipcodewilmington.scientificcalculator.Console.addNumbers;
+import static com.zipcodewilmington.scientificcalculator.Console.numberSign;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -30,5 +29,18 @@ public class TestMainApplication {
         Console.displayZero();
     }
 
+    @Test
+    public void testNumberSign1(){
+        Double expected = -5.0;
+
+        assertEquals(expected, numberSign(5.0));
+    }
+
+    @Test
+    public void testNumberSign2(){
+        Double expected = 5.0;
+
+        assertEquals(expected, numberSign(-5.0));
+    }
 
 }
