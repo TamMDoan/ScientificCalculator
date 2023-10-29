@@ -51,12 +51,6 @@ public class Console {
     }
     public static Double numberSign(Double userNumber) {
         return -userNumber;
-//        if (userNumber > 0) {
-//            userNumber = -userNumber;
-////        System.out.println("-" + userNumber);
-//        }
-//        else { System.out.println(userNumber);
-//    }
     }
 
     public static Double subtractNumbers(Double number1, Double number2){
@@ -143,6 +137,18 @@ public class Console {
         return null;
     }
 
+    public static void switchLogarithmicFunctions(){
+        System.out.println("Modes: Logarithmic Functions, Factorials");
+    }
+
+    public static String switchFactorials(String mode){
+        if(mode.equals("Logarithmic Functions")){
+            return "logarithmic functions";
+        }
+        else if (mode.equals("Factorials")){
+            return "factorials";
+        }
+    }
 
 }
 

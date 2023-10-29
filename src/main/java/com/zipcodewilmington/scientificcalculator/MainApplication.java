@@ -52,8 +52,12 @@ public class MainApplication {
             }
             else if(Objects.equals(userInput, "Divide")){
                 Double i2 = Console.getDoubleInput("Enter a number to divide by: ");
-                currentNumber = divideNumbers(currentNumber, i2);
-                Console.println("CURRENT NUMBER %s", currentNumber);
+                if (i2 == 0) {
+                    Console.println("Error cannot divide by zero");
+                } else {
+                    currentNumber = divideNumbers(currentNumber, i2);
+                    Console.println("CURRENT NUMBER %s", currentNumber);
+                }
             }
             else if(Objects.equals(userInput, "Square")){
                 currentNumber = Console.squareNumber(currentNumber);
@@ -75,6 +79,5 @@ public class MainApplication {
                 break;
             }
         }
-//This is a test
     }
 }
