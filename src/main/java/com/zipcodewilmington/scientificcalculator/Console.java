@@ -49,8 +49,16 @@ public class Console {
         System.out.println( displayZero);
 
     }
-    public void numberSign() {
-}
+    public static Double numberSign(Double userNumber) {
+        return -userNumber;
+//        if (userNumber > 0) {
+//            userNumber = -userNumber;
+////        System.out.println("-" + userNumber);
+//        }
+//        else { System.out.println(userNumber);
+//    }
+    }
+
 
 }
 
