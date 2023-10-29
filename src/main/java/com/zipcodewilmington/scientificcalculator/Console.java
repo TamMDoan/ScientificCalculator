@@ -137,10 +137,10 @@ public class Console {
         if(mode.equals("Degrees")){
             return "degrees";
         }
-        else if(mode.equals("Radians")){
+        else {
+            // just have it default to radians
             return "radians";
         }
-        return null;
     }
 
 
