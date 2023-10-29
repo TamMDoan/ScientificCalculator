@@ -96,6 +96,7 @@ public class MainApplication {
             }else if (Objects.equals(userInput.toLowerCase(), "exit")) {
                 break;
             }
+
         }
     }
 }
