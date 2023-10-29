@@ -43,5 +43,14 @@ public class Console {
 
         return number1 + number2;
     }
-    public void numberSign
+
+    public static void displayZero () {
+        int displayZero = 0;
+        System.out.println( displayZero);
+
+    }
+    public void numberSign() {
 }
+
+}
+
