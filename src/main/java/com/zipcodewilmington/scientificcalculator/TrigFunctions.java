@@ -31,6 +31,9 @@ public class TrigFunctions {
         if(Math.abs(Math.tan(number)) <= 1 && Math.abs(Math.tan(number)) >= .999999) {
             return (double) Math.round(Math.tan(number));
         }
+        if(Math.abs(Math.tan(number)) > 0 && Math.abs(Math.tan(number)) < Math.pow(6, -17)){
+            return 0.0;
+        }
         return Math.tan(number);
     }
 
