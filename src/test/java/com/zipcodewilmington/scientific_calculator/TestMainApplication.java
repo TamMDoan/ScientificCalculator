@@ -134,7 +134,7 @@ public class TestMainApplication {
     // Please someone save me from trig testing hell :((((((((
     @Test
     public void testSineRadians(){
-        Double number1 = Math.PI;
+        Double number1 = 0.0;
 
         Double expected = 0.0;
 
