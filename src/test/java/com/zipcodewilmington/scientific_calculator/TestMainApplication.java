@@ -150,7 +150,6 @@ public class TestMainApplication {
         assertEquals(expected, sine(number1, "radians"));
     }
 
-    // THESE AREN'T PASSING! TAM IS VERY AWARE OF IT!
      @Test
     public void testCosineDegrees(){
         Double number1 = 0.0;
