@@ -1,6 +1,13 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class CoreFunctions {
+
+    static double storage;
+
+    public static Double numberSign(Double userNumber) {
+        return -userNumber;
+    }
+
     public static Double addNumbers(Double number1, Double number2) {
 
         return number1 + number2;
@@ -40,7 +47,15 @@ public class CoreFunctions {
         return 1 / number;
     }
 
+    public static void save(double Number) {
+        storage = Number;
+        System.out.println(storage);
+    }
 
+    public static double recall() {
+        return storage;
+
+    }
 
 
 }

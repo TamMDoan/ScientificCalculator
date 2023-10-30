@@ -12,8 +12,6 @@ import java.lang.Math;
  */
 public class Console {
 
-    static double storage;
-
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
@@ -52,10 +50,6 @@ public class Console {
         int displayZero = 0;
         System.out.println(displayZero);
 
-    }
-
-    public static Double numberSign(Double userNumber) {
-        return -userNumber;
     }
 
     public static void switchUnitModes() {
@@ -102,14 +96,6 @@ public class Console {
         return 0.0;
     }
 
-    public static void save(double Number) {
-        storage = Number;
-        System.out.println(storage);
-    }
 
-    public static double recall() {
-        return storage;
-
-    }
 }
 
